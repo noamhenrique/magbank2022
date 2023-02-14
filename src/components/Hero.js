@@ -1,9 +1,10 @@
 import { Row, Col, Button, Image } from "react-bootstrap";
 import logo from "../assets/logo__magic-pay--mobile.png";
 import logoDesktop from "../assets/logo__magic-pay.png";
+import "./Hero.scss";
 
 const Hero = () => (
-  <div class="container-fluid bg-light p-5 text-center text-light">
+  <div class="container-fluid bg-light p-5 text-center text-light hero">
     <Row className="my-lg-5">
       <Col lg className="text-lg-end my-lg-5">
         <Image className="d-lg-none" src={logo} />
