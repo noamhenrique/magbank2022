@@ -3,3 +3,16 @@
 .faq {
   background-color: $color-faq-backgroud;
 }
+
+div.accordion {
+  --bs-accordion-btn-icon-width: none;
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-color: #fff;
+  --bs-accordion-border-color: #3b2e4a;
+  --bs-accordion-active-bg: #3b2e4a;
+  --bs-accordion-bg: #443a50;
+  --bs-accordion-btn-bg: #3b2e4a;
+  --bs-accordion-btn-color: #fff;
+  --bs-accordion-btn-focus-border-color: none;
+  --bs-accordion-btn-focus-box-shadow: none;
+}

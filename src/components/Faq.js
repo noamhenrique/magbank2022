@@ -18,16 +18,16 @@ const Faq = () => (
         <Col className="d-lg-none mb-5" xs={12}>
           <Row>
             <Col className="d-flex justify-content-center">
-              <FontAwesomeIcon icon={faCreditCard} size="2x" />
+              <FontAwesomeIcon icon={faCreditCard} size="2x" color="#FFF" />
             </Col>
             <Col className="d-flex justify-content-center">
-              <FontAwesomeIcon icon={faWallet} size="2x" />
+              <FontAwesomeIcon icon={faWallet} size="2x" color="#FFF" />
             </Col>
             <Col className="d-flex justify-content-center">
-              <FontAwesomeIcon icon={faShieldAlt} size="2x" />
+              <FontAwesomeIcon icon={faShieldAlt} size="2x" color="#FFF" />
             </Col>
             <Col className="d-flex justify-content-center">
-              <FontAwesomeIcon icon={faUserTie} size="2x" />
+              <FontAwesomeIcon icon={faUserTie} size="2x" color="#FFF" />
             </Col>
           </Row>
         </Col>
