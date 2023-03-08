@@ -4,7 +4,7 @@ import logoDesktop from "../assets/logo__magic-pay.png";
 import "./Hero.scss";
 
 const Hero = () => (
-  <div class="container-fluid bg-light p-5 text-center text-light hero">
+  <div class="container-fluid bg-light p-lg-5 py-5  text-center text-light hero">
     <Row className="my-lg-5">
       <Col lg className="text-lg-end my-lg-5">
         <Image className="d-lg-none" src={logo} />
