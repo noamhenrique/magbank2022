@@ -39,11 +39,6 @@ const Navigation = ({ handleCreateAcc }) => (
               <NavDropdown.Item>
                 <Link to="/login">Pessoa Jurídica</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
             </NavDropdown>
           </Button>
           <Button variant="outline-light" onClick={handleCreateAcc}>

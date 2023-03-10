@@ -6,6 +6,7 @@ import AccountModal from "./components/AccountModal";
 import "./App.scss";
 
 import Home from "./views/Home";
+import Login from "./views/Login";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -21,7 +22,7 @@ const App = () => {
             element={<Home handleClick={() => setShowModal(true)}></Home>}
           />
         </Route>
-        <Route path="/login" element={<h2>Hello React Router!</h2>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Footer />
