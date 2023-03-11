@@ -7,6 +7,7 @@ import "./App.scss";
 
 import Home from "./views/Home";
 import Login from "./views/Login";
+import Dashboard from "./views/Dashboard";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,6 +24,7 @@ const App = () => {
           />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
 
       <Footer />
