@@ -5,12 +5,24 @@ import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.scss";
 
 const Dashboard = () => {
-  const data = [
+  const latestData = [
     { date: "22/07", description: "SAQUE 24h 012345", value: "300,00" },
     { date: "21/07", description: "SUPERMERCADO 24h 2312332", value: "275,90" },
     { date: "21/07", description: "ESTACIONAMENTO 123234", value: "12,00" },
     {
       date: "21/07",
+      description: "PAGAMENTO ALUGUEL 123432",
+      value: "1.500,00",
+    },
+    { date: "21/07", description: "SEGURO 132987", value: "185,00" },
+  ];
+
+  const futureData = [
+    { date: "22/08", description: "SAQUE 24h 012345", value: "300,00" },
+    { date: "21/08", description: "SUPERMERCADO 24h 2312332", value: "275,90" },
+    { date: "21/08", description: "ESTACIONAMENTO 123234", value: "12,00" },
+    {
+      date: "21/08",
       description: "PAGAMENTO ALUGUEL 123432",
       value: "1.500,00",
     },
@@ -74,7 +86,7 @@ const Dashboard = () => {
         <Col xs={12} lg={5} className="mt-lg-5 pt-lg-5">
           <Tabs defaultActiveKey="latest" className="mt-5 pt-lg-5">
             <Tab eventKey="latest" title="Últimos Lançamentos">
-              <Table striped bordered hover>
+              <Table striped borderless>
                 <thead>
                   <tr>
                     <th>Data</th>
@@ -83,7 +95,7 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {data.map(({ date, description, value }) => (
+                  {latestData.map(({ date, description, value }) => (
                     <tr>
                       <td>{date}</td>
                       <td>{description}</td>
@@ -93,7 +105,26 @@ const Dashboard = () => {
                 </tbody>
               </Table>
             </Tab>
-            <Tab eventKey="future" title="Lançamentos Futuros" disabled></Tab>
+            <Tab eventKey="future" title="Lançamentos Futuros">
+              <Table striped borderless>
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor (R$)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {futureData.map(({ date, description, value }) => (
+                    <tr>
+                      <td>{date}</td>
+                      <td>{description}</td>
+                      <td>{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Tab>
           </Tabs>
         </Col>
       </Row>

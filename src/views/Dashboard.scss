@@ -1,6 +1,10 @@
 @import "../variables";
 
 .dashboard {
+  @media screen and (min-width: 992px) {
+    min-height: calc(100vh - 12.375rem);
+  }
+
   &__user-avatar {
     position: relative;
   }
@@ -21,5 +25,9 @@
       color: #fff;
       background-color: $color-primary;
     }
+  }
+
+  .nav {
+    --bs-nav-link-color: #8c00b2;
   }
 }
