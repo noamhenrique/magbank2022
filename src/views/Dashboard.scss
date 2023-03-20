@@ -20,8 +20,13 @@
     color: $color-primary;
     text-decoration: none;
 
-    &:hover,
-    &--active {
+    &:hover {
+      color: #fff;
+      background-color: $color-muted;
+    }
+
+    &--active,
+    &--active:hover {
       color: #fff;
       background-color: $color-primary;
     }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +9,14 @@ import AccountBalance from "../components/AccountBalance";
 import "./Dashboard.scss";
 
 const Dashboard = () => {
+  const [activeLink, setActiveLink] = useState(0);
+
+  const links = [
+    { text: "Minha Conta", path: "", exact: true },
+    { text: "Pagamentos", path: "payments" },
+    { text: "Extrato", path: "history" },
+  ];
+
   const data = {
     latestBalance: [
       { date: "22/07", description: "SAQUE 24h 012345", value: "300,00" },
@@ -63,24 +72,19 @@ const Dashboard = () => {
             </Col>
           </Row>
           <div className="d-grid gap-2">
-            <Link to="">
-              <Button
-                className="dashboard__button dashboard__button--active text-start"
-                variant="link"
-              >
-                Minha Conta
-              </Button>
-            </Link>
-            <Link to="payments">
-              <Button className="dashboard__button text-start" variant="link">
-                Pagamentos
-              </Button>
-            </Link>
-            <Link to="history">
-              <Button className="dashboard__button text-start" variant="link">
-                Extrato
-              </Button>
-            </Link>
+            {links.map(({ text, path, exact }, key) => (
+              <Link to={path} exact={exact ? exact : false} key={key}>
+                <Button
+                  className={`dashboard__button text-start ${
+                    key === activeLink ? "dashboard__button--active" : ""
+                  }`}
+                  variant="link"
+                  onClick={() => setActiveLink(key)}
+                >
+                  {text}
+                </Button>
+              </Link>
+            ))}
           </div>
         </Col>
         <Routes>
