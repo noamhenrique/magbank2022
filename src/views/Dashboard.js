@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
+import AccountPayments from "../components/AccountPayments";
 
 import "./Dashboard.scss";
 
@@ -19,7 +20,6 @@ const Dashboard = () => {
 
   const data = {
     latestBalance: [
-      { date: "22/07", description: "SAQUE 24h 012345", value: "300,00" },
       {
         date: "21/07",
         description: "SUPERMERCADO 24h 2312332",
@@ -89,7 +89,7 @@ const Dashboard = () => {
         </Col>
         <Routes>
           <Route path="history" element={<h2>Extrato</h2>} />
-          <Route path="payments" element={<h2>Pagamentos</h2>} />
+          <Route path="payments" element={<AccountPayments />} />
           <Route path="" element={<AccountBalance data={data} />} />
         </Routes>
       </Row>
