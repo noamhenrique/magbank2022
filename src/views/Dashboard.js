@@ -6,6 +6,7 @@ import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
 import AccountPayments from "../components/AccountPayments";
+import AccountHistory from "../components/AccountHistory";
 
 import "./Dashboard.scss";
 
@@ -48,6 +49,7 @@ const Dashboard = () => {
         value: "1.500,00",
       },
     ],
+    history: ["histórico 1", "histórico 2"],
   };
 
   return (
@@ -88,7 +90,7 @@ const Dashboard = () => {
           </div>
         </Col>
         <Routes>
-          <Route path="history" element={<h2>Extrato</h2>} />
+          <Route path="history" element={<AccountHistory data={data} />} />
           <Route path="payments" element={<AccountPayments />} />
           <Route path="" element={<AccountBalance data={data} />} />
         </Routes>
