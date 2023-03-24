@@ -11,6 +11,22 @@ import Dashboard from "./views/Dashboard";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState();
+  const [account, setAccount] = useState();
+  const isLogged = name && account;
+
+  const fakeAuth = {
+    login(name, account, cb) {
+      setName(name);
+      setAccount(account);
+      setTimeout(cb, 100);
+    },
+    logout(cb) {
+      setName();
+      setAccount();
+      setTimeout(cb, 100);
+    },
+  };
 
   return (
     <Router>
@@ -23,7 +39,7 @@ const App = () => {
             element={<Home handleClick={() => setShowModal(true)}></Home>}
           />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login auth={fakeAuth} />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" />
           <Route path="payments" />

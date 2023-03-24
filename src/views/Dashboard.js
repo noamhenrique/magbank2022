@@ -49,7 +49,68 @@ const Dashboard = () => {
         value: "1.500,00",
       },
     ],
-    history: ["histórico 1", "histórico 2"],
+    history: [
+      {
+        date: "17/07",
+        description: "SAQUE 24H 012345",
+        value: <span className="text-danger">200,00-</span>,
+      },
+      {
+        date: "17/07",
+        description: "SALDO DO DIA",
+        balance: "2.780,00",
+      },
+      {
+        date: "19/07",
+        description: "ESTACIONAMENTO 123234",
+        value: <span className="text-danger">12,00-</span>,
+      },
+      {
+        date: "19/07",
+        description: "COMPRA INTERNET 123432",
+        value: <span className="text-danger">450,00-</span>,
+      },
+      {
+        date: "19/07",
+        description: "SALDO DO DIA",
+        balance: "2.318,00",
+      },
+      {
+        date: "21/07",
+        description: "SUPERMERCADO 2312332",
+        value: <span className="text-danger">275,90-</span>,
+      },
+      {
+        date: "21/07",
+        description: "ESTACIONAMENTO 123234",
+        value: <span className="text-danger">12,00-</span>,
+      },
+      {
+        date: "21/07",
+        description: "SHOPPING 123432",
+        value: <span className="text-danger">180,00-</span>,
+      },
+      {
+        date: "21/07",
+        description: "SALDO DO DIA",
+        balance: "1.851,00",
+      },
+      {
+        date: "22/07",
+        description: "SUPERMERCADO 2312332",
+        value: <span className="text-danger">275,90</span>,
+      },
+      {
+        date: "22/07",
+        description: "DEPÓSITO 123234",
+        value: "1.000,00",
+      },
+      {
+        date: "22/07",
+        description: "SALDO DO DIA",
+        balance: "2.576,00",
+      },
+    ],
   };
 
   return (
