@@ -10,7 +10,7 @@ import AccountHistory from "../components/AccountHistory";
 
 import "./Dashboard.scss";
 
-const Dashboard = () => {
+const Dashboard = ({ className = false, name, account }) => {
   const [activeLink, setActiveLink] = useState(0);
 
   const links = [
@@ -114,7 +114,7 @@ const Dashboard = () => {
   };
 
   return (
-    <Container className="dashboard py-5">
+    <Container className={`dashboard py-5 ${className ? className : ""}`}>
       <Row>
         <Col xs={12} lg={4}>
           <Row className="align-items-center mb-5">
@@ -130,8 +130,8 @@ const Dashboard = () => {
               </span>
             </Col>
             <Col xs={9}>
-              <h4>Noam Henrique</h4>
-              <p className="text-muted">ag: 1234 c/c: 4321-5</p>
+              <h4>{name}</h4>
+              <p className="text-muted">{account}</p>
             </Col>
           </Row>
           <div className="d-grid gap-2">
