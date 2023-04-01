@@ -127,6 +127,54 @@ const Navigation = ({ handleCreateAcc }) => {
         </Navbar>
       ),
     },
+    {
+      path: "/dashboard/payments",
+      element: (
+        <Navbar variant="dark" expand="lg">
+          <Container>
+            <Navbar.Brand href="#home">
+              <Link to="/">
+                <img
+                  src={logo}
+                  height="30"
+                  className="d-inline-block align-top"
+                  alt="Magbank logo"
+                />
+              </Link>
+            </Navbar.Brand>
+            <ButtonGroup aria-label="Basic example" className="Leave__Button">
+              <Link to="/">
+                <Button variant="outline-light">Sair</Button>
+              </Link>
+            </ButtonGroup>
+          </Container>
+        </Navbar>
+      ),
+    },
+    {
+      path: "/dashboard/history",
+      element: (
+        <Navbar variant="dark" expand="lg">
+          <Container>
+            <Navbar.Brand href="#home">
+              <Link to="/">
+                <img
+                  src={logo}
+                  height="30"
+                  className="d-inline-block align-top"
+                  alt="Magbank logo"
+                />
+              </Link>
+            </Navbar.Brand>
+            <ButtonGroup aria-label="Basic example" className="Leave__Button">
+              <Link to="/">
+                <Button variant="outline-light">Sair</Button>
+              </Link>
+            </ButtonGroup>
+          </Container>
+        </Navbar>
+      ),
+    },
   ]);
 
   return routes;
